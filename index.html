@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang='en'>
+
+<head>
+    <meta charset='UTF-8'>
+    <meta name='viewport' content='width=device-width, initial-scale=1.0'>
+    <meta http-equiv='X-UA-Compatible' content='ie=edge'>
+    <title>XMA Landing Page</title>
+    <link rel='stylesheet' href='./assets/css/main.css'>
+</head>
+
+<body>
+
+    <header class="App__header">
+        <img src="./assets/img/XMA_logo.png" class="App__logo" alt="XMA Logo" />
+    </header>
+
+    <main class="App__main">
+
+            <div id="form__information">
+                <h1>Find out what Google Chrome for Enterprise can do for your organisation</h1>
+                <div class="chrome__logo-container">
+                    <img src="./assets/img/Chrome_logo.png" class="chome__logo" alt="Chrome Logo" />
+                </div>
+            </div>
+
+            <!-- Form  -->
+            <form method="GET" action="" class="App__form">
+                <h3 id="form__heading">Download the factsheet</h3>
+    
+                <!-- User information -->
+                <label for="name">
+                    Name
+                    <br />
+                    <input type="text" name="name" id="name" required />
+                </label>
+                <br />
+    
+                <label for="email">
+                    Email
+                    <br />
+                    <input type="email" name="email" id="email" required />
+                </label>
+                <br />
+    
+                <label for="number">
+                    Number
+                    <br />
+                    <input type="text" name="number" id="number" maxLength="11" required />
+                </label>
+                <br /> 
+    
+                <!-- Checkboxes -->
+                <label for="communication">
+                    <input type="checkbox" name="communication" id="communication" />
+                    <span class="checkmark"></span>
+                    <p>I would like to receive communications from XMA</p>
+                </label>
+                <br />
+    
+                <label for="privacy">
+                    <input type="checkbox" name="privacy" id="privacy" required />
+                    <span class="checkmark"></span>
+                    <p>I agree to the
+                        <span class="text__underline">privacy policy</span>
+                    </p>
+                </label>
+                <br />
+                
+                 <!-- Privacy Policy -->
+                <p class="text__small">
+                    We are Tech Data Limited and by providing your details you are consenting to us passing those details to our partner XMA
+                    and for them to contact you about Google products and services. All your data will be processed in accordance
+                    with our Privacy Policy, available at: techdata.co.uk and XMA’s Privacy Policy, available at xma.co.uk. Should
+                    you wish to with draw your consent you can do so at anytime by clicking here.
+                </p>
+    
+                <div class="form__submit-container">
+                    <button class="form__submit text__uppercase" type="submit">Submit</button>
+                </div>
+            </form>
+    </main>
+
+    <footer class="App__footer">
+        <div>
+            <p class="text__xlarge">
+                IT budgets for local and central government are shrinking, meaning you need IT infrastructure that can both cut
+                costs and help streamline your operations.
+            </p>
+        </div>
+
+        <div class="container">
+            <p class="text__xlarge">In the factsheet find out:</p>
+            <div class="grid">
+                <div class="col-3">
+                    <p class="text__large">
+                        How Chrome Devices can scale across your organisation without breaking the bank
+                    </p>
+                </div>
+                <div class="col-3">
+                    <p class="text__large">
+                        Why Chrome OS is the first choice when it comes to managing your workforce
+                    </p>
+                </div>
+                <div class="col-3">
+                    <p class="text__large">
+                        Where you could cut costs by choosing a Chrome for Enterprise license
+                    </p>
+                </div>
+            </div>
+        </div>
+
+        <div>
+            <p class="text__xlarge">
+                Download the factsheet and find out why Google Chrome for Enterprise is the leading IT solution for the public sector.
+            </p>
+        </div>
+    </footer>
+    <script src='./lib/jquery-3.3.1.min.js'></script>
+    <script src='./assets/js/app.js'></script>
+</body>
+
+</html>

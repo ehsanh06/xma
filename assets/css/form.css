@@ -1,0 +1,102 @@
+.App__form {
+  position: relative;
+  width: 380px;
+  top: 30px;
+  right: 110px;
+  padding: 24px;
+  float: right;
+  background: #ffffffe0;
+  /* Create a custom checkbox */
+  /* On mouse-over, add a grey background color */
+  /* When the checkbox is checked, add a blue background */
+  /* Create the checkmark/indicator (hidden when not checked) */
+  /* Show the checkmark when checked */
+}
+
+.App__form h3 {
+  margin: 24px 0;
+}
+
+.App__form label {
+  display: block;
+  position: relative;
+}
+
+.App__form label input[type="text"],
+.App__form label input[type="email"] {
+  width: 100%;
+  margin: 8px 0;
+  height: 35px;
+  padding: 0 12px;
+  font-size: 1em;
+}
+
+.App__form label p {
+  font-size: 0.85em;
+  width: 200px;
+  margin: auto;
+}
+
+.App__form label[for="communication"] input,
+.App__form label[for="privacy"] input {
+  position: absolute;
+  cursor: pointer;
+  opacity: 0;
+}
+
+.App__form .checkmark {
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 25px;
+  width: 25px;
+  background-color: #fff;
+  border: 1px solid #707070;
+}
+
+.App__form label[for="communication"] input:hover input ~ .checkmark,
+.App__form label[for="privacy"] input:hover input ~ .checkmark {
+  background-color: #ccc;
+}
+
+.App__form label[for="communication"] input:checked ~ .checkmark,
+.App__form label[for="privacy"] input:checked ~ .checkmark {
+  background-color: #2196F3;
+}
+
+.App__form .checkmark:after {
+  content: "";
+  position: absolute;
+  display: none;
+}
+
+.App__form label[for="communication"] input:checked ~ .checkmark:after,
+.App__form label[for="privacy"] input:checked ~ .checkmark:after {
+  display: block;
+  left: 8px;
+  top: 4px;
+  width: 5px;
+  height: 10px;
+  border: solid white;
+  border-width: 0 3px 3px 0;
+  -webkit-transform: rotate(45deg);
+  -ms-transform: rotate(45deg);
+  transform: rotate(45deg);
+}
+
+.App__form .form__submit-container {
+  text-align: center;
+  width: 150px;
+  display: block;
+  margin: 24px auto;
+}
+
+.App__form .form__submit-container .form__submit {
+  background: #517AED;
+  border: 0;
+  color: white;
+  font-size: 1.3rem;
+  font-weight: bold;
+  width: 100%;
+  padding: 6px;
+}

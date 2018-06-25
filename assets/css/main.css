@@ -1,0 +1,258 @@
+@import url(https://fonts.googleapis.com/css?family=Lato:400,300,300italic,400italic,700,700italic);
+.App__form {
+  position: relative;
+  width: 380px;
+  top: 30px;
+  right: 110px;
+  padding: 24px;
+  float: right;
+  background: #ffffffe0;
+  /* Create a custom checkbox */
+  /* On mouse-over, add a grey background color */
+  /* When the checkbox is checked, add a blue background */
+  /* Create the checkmark/indicator (hidden when not checked) */
+  /* Show the checkmark when checked */
+}
+
+.App__form h3 {
+  margin: 24px 0;
+}
+
+.App__form label {
+  display: block;
+  position: relative;
+}
+
+.App__form label input[type="text"],
+.App__form label input[type="email"] {
+  width: 100%;
+  margin: 8px 0;
+  height: 35px;
+  padding: 0 12px;
+  font-size: 1em;
+}
+
+.App__form label p {
+  font-size: 0.85em;
+  width: 200px;
+  margin: auto;
+}
+
+.App__form label[for="communication"] input,
+.App__form label[for="privacy"] input {
+  position: absolute;
+  cursor: pointer;
+  opacity: 0;
+}
+
+.App__form .checkmark {
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 25px;
+  width: 25px;
+  background-color: #fff;
+  border: 1px solid #707070;
+}
+
+.App__form label[for="communication"] input:hover input ~ .checkmark,
+.App__form label[for="privacy"] input:hover input ~ .checkmark {
+  background-color: #ccc;
+}
+
+.App__form label[for="communication"] input:checked ~ .checkmark,
+.App__form label[for="privacy"] input:checked ~ .checkmark {
+  background-color: #2196F3;
+}
+
+.App__form .checkmark:after {
+  content: "";
+  position: absolute;
+  display: none;
+}
+
+.App__form label[for="communication"] input:checked ~ .checkmark:after,
+.App__form label[for="privacy"] input:checked ~ .checkmark:after {
+  display: block;
+  left: 8px;
+  top: 4px;
+  width: 5px;
+  height: 10px;
+  border: solid white;
+  border-width: 0 3px 3px 0;
+  -webkit-transform: rotate(45deg);
+  -ms-transform: rotate(45deg);
+  transform: rotate(45deg);
+}
+
+.App__form .form__submit-container {
+  text-align: center;
+  width: 150px;
+  display: block;
+  margin: 24px auto;
+}
+
+.App__form .form__submit-container .form__submit {
+  background: #517AED;
+  border: 0;
+  color: white;
+  font-size: 1.3rem;
+  font-weight: bold;
+  width: 100%;
+  padding: 6px;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  color: #747474;
+  font-size: 100%;
+  font-family: 'Lato', Helvetica, sans-serif;
+}
+
+/* TYPOGRAPHY */
+h1 {
+  font-size: 2.5rem;
+}
+
+h2 {
+  font-size: 2rem;
+}
+
+h3 {
+  font-size: 1.375rem;
+}
+
+h4 {
+  font-size: 1.125rem;
+}
+
+h5 {
+  font-size: 1rem;
+}
+
+h6 {
+  font-size: 0.875rem;
+}
+
+p {
+  font-size: 1.125rem;
+  font-weight: 200;
+  line-height: 1.8;
+}
+
+.text_uppercase {
+  text-transform: uppercase;
+}
+
+.text__underline {
+  text-decoration: underline;
+}
+
+.text__small {
+  font-size: 0.9em;
+  padding: 8px;
+  margin: 8px 0;
+}
+
+.text__xlarge {
+  font-size: 2rem;
+  padding: 80px 0;
+  margin: 0 auto;
+  width: 65%;
+  font-weight: 900;
+}
+
+.App__header {
+  background: #527BF0;
+  text-align: center;
+}
+
+.App__header img {
+  display: block;
+  width: 180px;
+  margin: 0 auto;
+  padding: 18px;
+}
+
+.App__main {
+  background: url(../img/splash.jpg) no-repeat;
+  background-size: cover;
+  display: block;
+  height: 910px;
+  width: 100%;
+  clear: both;
+}
+
+.App__main #form__information {
+  width: 685px;
+  background: #fff;
+  position: relative;
+  top: 150px;
+  left: 0;
+  float: left;
+}
+
+.App__main #form__information h1 {
+  padding: 36px;
+  width: 660px;
+  margin: 0 auto;
+}
+
+.App__main #form__information .chrome__logo-container {
+  text-align: center;
+  width: 50%;
+  margin-left: auto;
+  margin-right: auto;
+  margin-bottom: 40px;
+}
+
+.App__main #form__information .chrome__logo-container img {
+  width: 50%;
+  margin: 0 auto;
+  display: block;
+}
+
+.App__footer .container {
+  background: #EFEFF0;
+  padding: 40px 0 60px 0;
+}
+
+.App__footer .container p.text__xlarge {
+  padding: 12px 0;
+}
+
+.App__footer .container .grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  width: 65%;
+  margin: 0 auto;
+  grid-gap: 2em;
+}
+
+.App__footer .container .grid p.text__large {
+  padding: 0;
+  font-size: 1.5rem;
+  width: 75%;
+  text-align: center;
+  font-weight: 400;
+  margin: 0 auto;
+  color: #fff;
+}
+
+.App__footer .container .grid .col-3 {
+  padding: 1em 0;
+}
+
+.App__footer .container .grid .col-3:first-child {
+  background: #517AED;
+}
+
+.App__footer .container .grid .col-3:nth-child(2) {
+  background: #F8BE35;
+}
+
+.App__footer .container .grid .col-3:last-child {
+  background: #0FA85A;
+}

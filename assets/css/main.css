@@ -2,6 +2,7 @@
 .App__form {
   position: relative;
   width: 380px;
+  height: 880px;
   top: 30px;
   right: 110px;
   padding: 24px;
@@ -15,12 +16,23 @@
 }
 
 .App__form h3 {
-  margin: 24px 0;
+  margin: 0 0 24px 0;
+}
+
+.App__form p.text__small {
+  padding: 0 0 28px 0;
+  line-height: 1.15;
 }
 
 .App__form label {
   display: block;
   position: relative;
+  font-weight: 600;
+  font-size: 1.1em;
+}
+
+.App__form label input {
+  border: 2px solid #747474;
 }
 
 .App__form label input[type="text"],
@@ -35,7 +47,9 @@
 .App__form label p {
   font-size: 0.85em;
   width: 200px;
-  margin: auto;
+  margin: 0 auto;
+  font-weight: 400;
+  letter-spacing: 0.25px;
 }
 
 .App__form label[for="communication"] input,
@@ -52,7 +66,8 @@
   height: 25px;
   width: 25px;
   background-color: #fff;
-  border: 1px solid #707070;
+  border: 2px solid #707070;
+  cursor: pointer;
 }
 
 .App__form label[for="communication"] input:hover input ~ .checkmark,
@@ -62,7 +77,7 @@
 
 .App__form label[for="communication"] input:checked ~ .checkmark,
 .App__form label[for="privacy"] input:checked ~ .checkmark {
-  background-color: #2196F3;
+  background-color: #4385f5;
 }
 
 .App__form .checkmark:after {
@@ -74,8 +89,8 @@
 .App__form label[for="communication"] input:checked ~ .checkmark:after,
 .App__form label[for="privacy"] input:checked ~ .checkmark:after {
   display: block;
-  left: 8px;
-  top: 4px;
+  left: 7px;
+  top: 3px;
   width: 5px;
   height: 10px;
   border: solid white;
@@ -93,13 +108,66 @@
 }
 
 .App__form .form__submit-container .form__submit {
-  background: #517AED;
+  background: #4385f5;
   border: 0;
   color: white;
   font-size: 1.3rem;
   font-weight: bold;
   width: 100%;
-  padding: 6px;
+  padding: 0.45em 1em;
+  letter-spacing: -1px;
+  cursor: pointer;
+}
+
+.App__form .success {
+  color: green;
+}
+
+.App__form .error {
+  color: red;
+}
+
+@media only screen and (max-width: 1440px) {
+  .text__small {
+    font-size: 0.85em;
+    padding: 8px;
+    margin: 8px 0;
+  }
+  .App__form {
+    width: 30%;
+    height: 100%;
+  }
+  .App__form .checkmark {
+    height: 20px;
+    width: 20px;
+  }
+}
+
+@media only screen and (max-width: 1210px) {
+  .App__form {
+    right: 60px;
+  }
+  .App__form .text__small {
+    font-size: 0.8em;
+    padding: 8px;
+    margin: 8px 0;
+  }
+}
+
+@media only screen and (max-width: 1024px) {
+  .App__form {
+    right: 30px;
+  }
+  .App__form h3 {
+    margin: 0 0 22px 0;
+  }
+  .App__form label p {
+    width: 160px;
+  }
+  .App__form .text__small {
+    padding: 0;
+    margin: 0;
+  }
 }
 
 * {
@@ -111,7 +179,7 @@
   font-family: 'Lato', Helvetica, sans-serif;
 }
 
-/* TYPOGRAPHY */
+/* Typography*/
 h1 {
   font-size: 2.5rem;
 }
@@ -142,7 +210,11 @@ p {
   line-height: 1.8;
 }
 
-.text_uppercase {
+.text__bold {
+  font-weight: bold;
+}
+
+.text__uppercase {
   text-transform: uppercase;
 }
 
@@ -154,6 +226,8 @@ p {
   font-size: 0.9em;
   padding: 8px;
   margin: 8px 0;
+  line-height: 1.15;
+  font-weight: 500;
 }
 
 .text__xlarge {
@@ -161,32 +235,33 @@ p {
   padding: 80px 0;
   margin: 0 auto;
   width: 65%;
-  font-weight: 900;
+  font-weight: 400;
+  line-height: 1.2;
 }
 
 .App__header {
-  background: #527BF0;
+  background: #4385f5;
   text-align: center;
 }
 
 .App__header img {
   display: block;
-  width: 180px;
+  width: 200px;
   margin: 0 auto;
   padding: 18px;
 }
 
 .App__main {
-  background: url(../img/splash.jpg) no-repeat;
+  background: url(../img/splash.png) no-repeat;
   background-size: cover;
   display: block;
-  height: 910px;
+  height: 850px;
   width: 100%;
   clear: both;
 }
 
 .App__main #form__information {
-  width: 685px;
+  width: 35%;
   background: #fff;
   position: relative;
   top: 150px;
@@ -195,8 +270,8 @@ p {
 }
 
 .App__main #form__information h1 {
-  padding: 36px;
-  width: 660px;
+  padding: 56px;
+  width: 700px;
   margin: 0 auto;
 }
 
@@ -220,7 +295,8 @@ p {
 }
 
 .App__footer .container p.text__xlarge {
-  padding: 12px 0;
+  padding: 40px 0;
+  font-weight: 400;
 }
 
 .App__footer .container .grid {
@@ -232,21 +308,22 @@ p {
 }
 
 .App__footer .container .grid p.text__large {
-  padding: 0;
+  padding: 8px 0 40px 0;
   font-size: 1.5rem;
   width: 75%;
   text-align: center;
   font-weight: 400;
   margin: 0 auto;
   color: #fff;
+  line-height: 1.15;
 }
 
 .App__footer .container .grid .col-3 {
-  padding: 1em 0;
+  padding: 1.5em 0;
 }
 
 .App__footer .container .grid .col-3:first-child {
-  background: #517AED;
+  background: #4385f5;
 }
 
 .App__footer .container .grid .col-3:nth-child(2) {
@@ -255,4 +332,73 @@ p {
 
 .App__footer .container .grid .col-3:last-child {
   background: #0FA85A;
+}
+
+@media only screen and (max-width: 1440px) {
+  h1 {
+    font-size: 2rem;
+  }
+  h3 {
+    font-size: 1.375rem;
+  }
+  .text__xlarge {
+    font-size: 1.8em;
+  }
+  .App__main {
+    height: 820px;
+  }
+  .App__main #form__information h1 {
+    padding: 36px;
+    width: 100%;
+    margin: 0 auto;
+  }
+  .App__main #form__information .chrome__logo-container img {
+    width: 70%;
+    margin: 0 auto;
+    display: block;
+  }
+  .App__footer .container .grid p.text__large {
+    padding: 0;
+    font-size: 1.5rem;
+    width: 85%;
+    text-align: center;
+    font-weight: 400;
+    margin: 0 auto;
+    color: #fff;
+    line-height: 1.5;
+  }
+}
+
+@media only screen and (max-width: 1210px) {
+  h1 {
+    font-size: 1.9em;
+  }
+  .text__xlarge {
+    font-size: 1.55em;
+    line-height: 1.5;
+  }
+  .App__main #form__information h1 {
+    padding: 24px 30px;
+  }
+  .App__footer .container .grid p.text__large {
+    padding: 2px;
+    font-size: 1.3rem;
+    width: 85%;
+  }
+}
+
+@media only screen and (max-width: 1024px) {
+  .text__xlarge {
+    font-size: 1.45em;
+    line-height: 1.5;
+    padding: 60px 0;
+  }
+  .App__footer .container .grid .col-3 {
+    padding: 0.5em 0;
+  }
+  .App__footer .container .grid p.text__large {
+    padding: 10px;
+    font-size: 1.25em;
+    width: 100%;
+  }
 }

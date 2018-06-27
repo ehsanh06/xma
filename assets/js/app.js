@@ -41,15 +41,4 @@ $(() => {
             data.responseText !== '' ? $(formMessages).text(data.responseText) : $(formMessages).text('Oops! An error occured and your message could not be sent.');
         });
     });
-
-    // Remove Desktop <main> from DOM if we enter Mobile viewport
-    if ($(window).width() < 650) {
-        $(".App__main").remove();
-        console.log('Deleted: ', $(this));
-    } else {
-        // Else we just remove Mobile <main> and <section>
-        $(".mobileApp__main").remove();
-        $(".mobileForm__section").remove();
-        console.log('Deleted: ', $(this));
-    }
 });

@@ -125,7 +125,7 @@
      }
  }
 
-
+// Desktop Viewports up until 1440px
 @media only screen and (max-width: 1440px) {
     .text__small {
         font-size: 0.85em;
@@ -160,6 +160,7 @@
 
 }
 
+// Small Laptop viewport 1024px
 @media only screen and (max-width: 1024px) {
     
     .App__form {
@@ -178,5 +179,16 @@
             margin: 0;
         }
         
+    }
+}
+
+// Tablet viewport
+@media only screen and (max-width: 900px) {
+    .App__form {
+        width: 40%;
+
+        label {
+            font-size: 1em;
+        }
     }
 }

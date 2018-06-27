@@ -169,6 +169,8 @@ p {
     }
 }
 
+// Desktop Viewports up until 1440px
+
 @media only screen and (max-width: 1440px) {
     h1 {
         font-size: 2rem;
@@ -235,6 +237,8 @@ p {
     }
 }
 
+// Small Laptop viewport 1024px
+
 @media only screen and (max-width: 1024px) {
     .text__xlarge {
         font-size: 1.45em;
@@ -251,5 +255,50 @@ p {
         padding: 10px;
         font-size: 1.25em;
         width: 100%;
+    }
+}
+
+// Tablet viewport
+@media only screen and (max-width: 900px) {
+
+    h1 {
+        font-size: 1.6em;
+    }
+
+    h3 {
+        font-size: 1.275rem;
+    }
+
+
+
+    .App__header img {
+        width: 150px;
+    }
+
+    .App__main {
+        height: 810px;
+
+        #form__information {
+            
+            h1 {
+                padding: 30px 40px;
+            }
+            
+            .chrome__logo-container {
+                margin-bottom: 40px;
+                margin-top: 10px;
+            }
+        }
+    }
+
+    .App__footer {
+        .text__xlarge {
+            font-size: 1.25em;
+            width: 85%;
+        }
+
+        .container .grid {
+            width: 85%;
+        }
     }
 }

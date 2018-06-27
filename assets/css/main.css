@@ -170,6 +170,15 @@
   }
 }
 
+@media only screen and (max-width: 900px) {
+  .App__form {
+    width: 40%;
+  }
+  .App__form label {
+    font-size: 1em;
+  }
+}
+
 * {
   margin: 0;
   padding: 0;
@@ -400,5 +409,34 @@ p {
     padding: 10px;
     font-size: 1.25em;
     width: 100%;
+  }
+}
+
+@media only screen and (max-width: 900px) {
+  h1 {
+    font-size: 1.6em;
+  }
+  h3 {
+    font-size: 1.275rem;
+  }
+  .App__header img {
+    width: 150px;
+  }
+  .App__main {
+    height: 810px;
+  }
+  .App__main #form__information h1 {
+    padding: 30px 40px;
+  }
+  .App__main #form__information .chrome__logo-container {
+    margin-bottom: 40px;
+    margin-top: 10px;
+  }
+  .App__footer .text__xlarge {
+    font-size: 1.25em;
+    width: 85%;
+  }
+  .App__footer .container .grid {
+    width: 85%;
   }
 }

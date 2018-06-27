@@ -168,3 +168,12 @@
     margin: 0;
   }
 }
+
+@media only screen and (max-width: 900px) {
+  .App__form {
+    width: 40%;
+  }
+  .App__form label {
+    font-size: 1em;
+  }
+}

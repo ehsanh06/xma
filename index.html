@@ -84,6 +84,78 @@
             </form>
     </main>
 
+    <!-- Mobile version -->
+    <main class="mobileApp__main">
+        <div id="form__information">
+            <h1>Find out what Google Chrome for Enterprise can do for your organisation</h1>
+            <div class="chrome__logo-container">
+                <img src="./assets/img/Chrome_logo.png" class="chome__logo" alt="Chrome Logo" />
+            </div>
+        </div>
+    </main>
+    <section class="mobileForm__section">
+
+        <!-- Form  -->
+        <form method="POST" action="./mailer.php" class="mobile__form">
+            <h3 id="form__heading">Download the factsheet</h3>
+        
+            <!-- User information -->
+            <label for="name">
+                Name
+                <br />
+                <input type="text" name="name" id="name" required />
+            </label>
+            <br />
+        
+            <label for="email">
+                Email
+                <br />
+                <input type="email" name="email" id="email" required />
+            </label>
+            <br />
+        
+            <label for="number">
+                Phone Number
+                <br />
+                <input type="text" name="number" id="number" maxLength="11" required />
+            </label>
+            <br />
+        
+            <!-- Checkboxes -->
+            <label for="communication">
+                <input type="checkbox" name="communication" id="communication" />
+                <span class="checkmark"></span>
+                <p>I would like to receive communications from XMA</p>
+            </label>
+            <br />
+        
+            <label for="privacy">
+                <input type="checkbox" name="privacy" id="privacy" required />
+                <span class="checkmark"></span>
+                <p>I agree to the
+                    <span class="text__underline">privacy policy</span>
+                </p>
+            </label>
+            <br />
+        
+            <!-- Privacy Policy -->
+            <p class="text__small">
+                We are Tech Data Limited and by providing your details you are consenting to us passing those details to our partner XMA
+                and for them to contact you about Google products and services. All your data will be processed in accordance with
+                our Privacy Policy, available at: techdata.co.uk and XMA’s Privacy Policy, available at xma.co.uk. Should
+                <span class="text__bold">you wish to withdraw</span> your consent you can do so at anytime by clicking here.
+            </p>
+        
+            <div class="form__submit-container">
+                <button class="form__submit text__uppercase" type="submit">Submit</button>
+            </div>
+        
+            <!-- Message Toastr -->
+            <div id="form-messages"></div>
+        </form>
+
+    </section>
+
     <footer class="App__footer">
         <div>
             <p class="text__xlarge">

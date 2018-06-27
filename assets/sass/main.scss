@@ -71,6 +71,10 @@ p {
     line-height: 1.2;
 }
 
+.hidden {
+    display: none;
+}
+
 .App__header {
     background: #4385f5;
     text-align: center;
@@ -81,6 +85,9 @@ p {
         margin: 0 auto;
         padding: 18px;
     }
+}
+.mobileApp__main {
+    display: none;
 }
 
 .App__main {
@@ -300,5 +307,163 @@ p {
         .container .grid {
             width: 85%;
         }
+    }
+}
+
+// Mobile viewport up until 650px
+@media only screen and (max-width: 650px) {
+
+    h1 {
+        font-size: 2em;
+    }
+
+    h3 {
+        font-size: 1.375rem;
+    }
+
+    .App__header img {
+        width: 210px;
+    }
+
+    .App__main {
+        display: none;
+    }
+
+    .mobileApp__main {
+        background: url(../img/splash.png) no-repeat;
+        background-size: cover;
+        display: block;
+        height: 850px;
+        width: 100%;
+        clear: both;
+        background-position-x: -720px;
+        background-position-y: 0px;
+
+        #form__information {
+            background: #fff;
+            width: 85%;
+            margin: 0 auto;
+            padding: 4em;
+            position: relative;
+            top: 40%;
+        }
+
+        .chrome__logo-container {
+            width: 50%;
+            margin: 25px auto;
+            text-align: center;
+
+            img {
+                width: 100%;
+                padding: 1em 0;
+                display: block;
+            }
+        }
+    }
+
+    footer.App__footer {
+        .text__xlarge {
+            font-size: 1.8em;
+            padding: 0px 0 80px 0;
+        }
+        .container .grid {
+            display: grid;
+            grid-template-columns: none;
+            grid-template-rows: repeat(3, 1fr);
+            width: 65%;
+            margin: 0 auto;
+            grid-gap: 2em;
+
+            p.text__large {
+                padding: 55px;
+                font-size: 1.5rem;
+                width: 100%;
+            }
+        }
+
+        > div:last-child {
+            .text__xlarge {
+                padding: 60px 0;
+            }
+        }
+    }
+}
+
+@media only screen and (max-width: 425px) {
+
+    h1 {
+        font-size: 1.9em;
+    }
+
+    h3 {
+        font-size: 1.275rem;
+    }
+
+    .App__header img {
+        width: 180px;
+    }
+
+    .mobileApp__main {
+        #form__information {
+            top: 30%;
+            padding: 3em;
+
+            .chrome__logo-container {
+                width: 60%;
+                margin: 25px auto;
+                text-align: center;
+            }
+        }
+    } 
+
+    footer.App__footer {
+        .text__xlarge {
+            font-size: 1.6em;
+            padding: 0px 0 80px 0;
+        }
+
+        .container .grid {
+            grid-template-rows: repeat(3, 1fr);
+            width: 80%;
+
+            p.text__large {
+                padding: 35px;
+                font-size: 1.3rem;
+                width: 100%;
+            }
+        }
+    }
+}
+
+@media only screen and (max-width: 320px) {
+
+    h1 {
+        font-size: 1.8em;
+    }
+
+    .App__header img {
+        width: 150px;
+    }
+
+    .mobileApp__main {
+        background-position-x: -850px;
+        #form__information {
+            padding: 2em;
+
+            .chrome__logo-container {
+                width: 70%;
+            }
+        }
+    }
+
+    footer.App__footer .text__xlarge {
+        font-size: 1.5em;
+        padding: 0px 0 80px 0;
+    }
+
+    footer.App__footer .container .grid p.text__large {
+        padding: 35px;
+        font-size: 1.2rem;
+        width: 100%;
     }
 }

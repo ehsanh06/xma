@@ -25,7 +25,7 @@
             </div>
 
             <!-- Form  -->
-            <form method="GET" action="" class="App__form">
+            <form method="POST" action="./mailer.php" class="App__form">
                 <h3 id="form__heading">Download the factsheet</h3>
     
                 <!-- User information -->
@@ -44,7 +44,7 @@
                 <br />
     
                 <label for="number">
-                    Number
+                    Phone Number
                     <br />
                     <input type="text" name="number" id="number" maxLength="11" required />
                 </label>
@@ -72,12 +72,15 @@
                     We are Tech Data Limited and by providing your details you are consenting to us passing those details to our partner XMA
                     and for them to contact you about Google products and services. All your data will be processed in accordance
                     with our Privacy Policy, available at: techdata.co.uk and XMA’s Privacy Policy, available at xma.co.uk. Should
-                    you wish to with draw your consent you can do so at anytime by clicking here.
+                    <span class="text__bold">you wish to withdraw</span> your consent you can do so at anytime by clicking here.
                 </p>
     
                 <div class="form__submit-container">
                     <button class="form__submit text__uppercase" type="submit">Submit</button>
                 </div>
+
+                <!-- Message Toastr -->
+                <div id="form-messages"></div>
             </form>
     </main>
 

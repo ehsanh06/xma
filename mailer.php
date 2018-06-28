@@ -23,7 +23,7 @@
         $recipient = "manuel@gameyfi.com";
 
         // Set the email subject.
-        $subject = "New contact from $name";
+        $subject = "EMAIL HEADING HERE";
 
         // Build the email content.
         $email_content = "Name: $name\n";

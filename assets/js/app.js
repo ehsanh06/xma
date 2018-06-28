@@ -30,7 +30,6 @@ $(() => {
             // Empty the form
             $('#name', '#email', '#number').val('');
 
-            window.open("./assets/data/XMA_Factsheet.pdf", "_blank");
         })
         .fail((data) => {
 
@@ -55,3 +54,6 @@ function removeit() {
     }
 }
 
+function downloadPDF() {
+    window.open("./assets/data/XMA_Factsheet.pdf", "_blank");
+}

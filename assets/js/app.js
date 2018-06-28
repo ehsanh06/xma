@@ -49,7 +49,7 @@ $(() => {
     $('.form__submit').attr('disabled', true);
 
     $('label input').keyup(function () {
-        if ($(this).val().length != 0)
+        if ($(this).attr('required').length != 0 || $(this).attr('required').prop('checked'))
             $('.form__submit').attr('disabled', false);
         else
             $('.form__submit').attr('disabled', true);

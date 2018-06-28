@@ -55,5 +55,7 @@ function removeit() {
 }
 
 function downloadPDF() {
-    window.open("./assets/data/XMA_Factsheet.pdf", "_blank");
+    setTimeout(() => {
+        window.open("./assets/data/XMA_Factsheet.pdf", "_blank");
+    }, 1500);
 }

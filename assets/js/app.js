@@ -41,4 +41,15 @@ $(() => {
             data.responseText !== '' ? $(formMessages).text(data.responseText) : $(formMessages).text('Oops! An error occured and your message could not be sent.');
         });
     });
+
+    removeit();
 });
+
+// If viewport is 650px and below, remove desktop .App__main
+// Simple workaround for bug of Mobile version form 
+function removeit() {
+    if ($(window).width() < 650) {
+        $('body .App__main').remove();
+    }
+}
+

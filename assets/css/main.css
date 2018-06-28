@@ -131,6 +131,10 @@
   color: red;
 }
 
+.App__form #form-messages {
+  text-align: center;
+}
+
 @media only screen and (max-width: 1440px) {
   .text__small {
     font-size: 0.85em;
@@ -208,6 +212,7 @@
     /* On mouse-over, add a grey background color */
     /* When the checkbox is checked, add a blue background */
     /* Create the checkmark/indicator (hidden when not checked) */
+    /* Show the checkmark when checked */
   }
   .mobileForm__section form.mobile__form h3 {
     margin: 0 0 24px 0;
@@ -268,6 +273,19 @@
     content: "";
     position: absolute;
     display: none;
+  }
+  .mobileForm__section form.mobile__form label[for="communication"] input:checked ~ .checkmark:after,
+  .mobileForm__section form.mobile__form label[for="privacy"] input:checked ~ .checkmark:after {
+    display: block;
+    left: 7px;
+    top: 3px;
+    width: 5px;
+    height: 10px;
+    border: solid white;
+    border-width: 0 3px 3px 0;
+    -webkit-transform: rotate(45deg);
+    -ms-transform: rotate(45deg);
+    transform: rotate(45deg);
   }
   .mobileForm__section form.mobile__form .form__submit-container {
     text-align: center;

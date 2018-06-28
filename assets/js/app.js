@@ -44,7 +44,19 @@ $(() => {
     });
 
     removeit();
+
+    // Button disable function
+    $('.form__submit').attr('disabled', true);
+
+    $('label input').keyup(function () {
+        if ($(this).val().length != 0)
+            $('.form__submit').attr('disabled', false);
+        else
+            $('.form__submit').attr('disabled', true);
+    })
+
 });
+
 
 // If viewport is 650px and below, remove desktop .App__main
 // Simple workaround for bug of Mobile version form 

@@ -50,7 +50,7 @@ $(() => {
         let formDataFilled = $('label input').attr('required').length != 0 && $('label input').prop('checked');
         console.log("hit");
 
-        if (formDataFilled == true) {            
+        if (!formDataFilled === true) {            
             formSuccess = true;
             setTimeout(() => {
                 if (formSuccess === true) {

@@ -56,14 +56,19 @@ $(() => {
     })
 
 
-    $("#form_submit_button").on('click', () => {
+    $("button.form__submit").on('click', () => {
+
+        let formDataFilled = $(this).attr('required').length != 0 || $(this).attr('required').prop('checked');
         console.log("hit");
-        formSuccess = true;
-        setTimeout(() => {
-            if (formSuccess === true) {
-                downloadPDF();
-            }
-        }, 1500);
+
+        if (formDataFilled == true) {            
+            formSuccess = true;
+            setTimeout(() => {
+                if (formSuccess === true) {
+                    downloadPDF();
+                }
+            }, 1500);
+        }
     });
 
 });

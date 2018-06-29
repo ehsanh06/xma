@@ -58,7 +58,7 @@ $(() => {
 
     $("button.form__submit").on('click', () => {
 
-        let formDataFilled = $('label input').attr('required').length != 0 || $('label input').attr('required').prop('checked');
+        let formDataFilled = $('label input').attr('required').length != 0 && $('label input').attr('required').prop('checked');
         console.log("hit");
 
         if (formDataFilled == true) {            

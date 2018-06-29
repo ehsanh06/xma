@@ -1,6 +1,7 @@
 $(() => {
     let form = $('.App__form'),
-        formMessages = $('#form-messages');
+        formMessages = $('#form-messages'),
+        formSuccess = false; 
 
     // Form event listener
     $(form).on('submit', (e) => {
@@ -11,42 +12,41 @@ $(() => {
 
         // Submit form via AJAX
         $.ajax({
-            type: 'POST',
-            url: $(form).attr('action'),
-            data: formData
-        })
+                type: 'POST',
+                url: $(form).attr('action'),
+                data: formData
+            })
 
-        // On successful request
-        .done((response) => {
+            // On successful request
+            .done((response) => {
+                // Form message has the success class
+                $(formMessages)
+                    .removeClass('error')
+                    .addClass('success')
 
-            // Form message has the success class
-            $(formMessages)
-                .removeClass('error')
-                .addClass('success')
+                    // Set message text
+                    .text(response);
+
+                // Empty the form
+                $('#name', '#email', '#number').val('');
+
+            })
+            .fail((data) => {
+
+                // Form message has the error class
+                $(formMessages)
+                    .removeClass('success')
+                    .addClass('error');
 
                 // Set message text
-                .text(response);
-
-            // Empty the form
-            $('#name', '#email', '#number').val('');
-
-        })
-        .fail((data) => {
-
-            // Form message has the error class
-            $(formMessages)
-                .removeClass('success')
-                .addClass('error');
-            
-            // Set message text
-            data.responseText !== '' ? $(formMessages).text(data.responseText) : $(formMessages).text('Oops! An error occured and your message could not be sent.');
-        });
+                data.responseText !== '' ? $(formMessages).text(data.responseText) : $(formMessages).text('Oops! An error occured and your message could not be sent.');
+            });
     });
 
     removeit();
 
     // Button disable function
-    $('.form__submit').attr('disabled', true);
+    //$('.form__submit').attr('disabled', true);
 
     $('label input').keyup(function () {
         if ($(this).attr('required').length != 0 || $(this).attr('required').prop('checked'))
@@ -54,6 +54,17 @@ $(() => {
         else
             $('.form__submit').attr('disabled', true);
     })
+
+
+    $("#form_submit_button").on('click', () => {
+        console.log("hit");
+        formSuccess = true;
+        setTimeout(() => {
+            if (formSuccess === true) {
+                downloadPDF();
+            }
+        }, 1500);
+    });
 
 });
 
@@ -67,7 +78,5 @@ function removeit() {
 }
 
 function downloadPDF() {
-    setTimeout(() => {
-        window.open("./assets/data/XMA_Factsheet.pdf", "_blank");
-    }, 1500);
+    window.open("./assets/data/XMA_Factsheet.pdf", "_blank");
 }

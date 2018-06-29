@@ -6,7 +6,7 @@
     "scripts": {
         "test": "echo \"Error: no test specified\" && exit 1"
     },
-    "author": "Ehsan Hussain",
+    "author": "Gameyfi",
     "license": "MIT",
     "dependencies": {
         "connect": "^3.6.6",

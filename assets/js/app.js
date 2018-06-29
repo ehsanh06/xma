@@ -47,10 +47,10 @@ $(() => {
 
     $("button.form__submit").on('click', () => {
 
-        let formDataFilled = $('label input').attr('required').length != 0 && $('label input').prop('checked');
+        let formDataFilled = $('#name').val().length > 0 && $('#email').val().length > 0 && $('#name').val().length > 0 && $('#number').val().length > 0 && $('#privacy').is(":checked")
         console.log("hit");
-
-        if (!formDataFilled === true) {            
+        console.log('formDataFilled-->'+formDataFilled)
+        if (formDataFilled == true) {            
             formSuccess = true;
             setTimeout(() => {
                 if (formSuccess === true) {

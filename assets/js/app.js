@@ -45,17 +45,6 @@ $(() => {
 
     removeit();
 
-    // Button disable function
-    //$('.form__submit').attr('disabled', true);
-
-    $('label input').keyup(function () {
-        if ($(this).attr('required').length != 0 || $(this).attr('required').prop('checked'))
-            $('.form__submit').attr('disabled', false);
-        else
-            $('.form__submit').attr('disabled', true);
-    })
-
-
     $("button.form__submit").on('click', () => {
 
         let formDataFilled = $('label input').attr('required').length != 0 && $('label input').attr('required').prop('checked');

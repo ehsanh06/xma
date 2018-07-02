@@ -1,7 +1,17 @@
 $(() => {
-    let form = $('.App__form'),
+    let form,
         formMessages = $('#form-messages'),
         formSuccess = false; 
+
+    // If viewport is 650px and below, remove desktop .App__main
+    // Simple workaround for bug of Mobile version form
+    if ($(window).width() < 650) {
+        $('body .desktop__form').remove();
+        form = $('.mobile__form');
+    } else {
+        $('body .mobile__form').remove();
+        form = $('.desktop__form');
+    }
 
     // Form event listener
     $(form).on('submit', (e) => {
@@ -43,8 +53,6 @@ $(() => {
             });
     });
 
-    removeit();
-
     $("button.form__submit").on('click', () => {
 
         let formDataFilled = $('#name').val().length > 0 && $('#email').val().length > 0 && $('#name').val().length > 0 && $('#number').val().length > 0 && $('#privacy').is(":checked")
@@ -61,15 +69,6 @@ $(() => {
     });
 
 });
-
-
-// If viewport is 650px and below, remove desktop .App__main
-// Simple workaround for bug of Mobile version form 
-function removeit() {
-    if ($(window).width() < 650) {
-        $('body .App__main').remove();
-    }
-}
 
 function downloadPDF() {
     window.open("./assets/data/XMA_Factsheet.pdf", "_blank");

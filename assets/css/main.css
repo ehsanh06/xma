@@ -3,7 +3,7 @@
   display: none;
 }
 
-.App__form {
+.desktop__form {
   position: relative;
   width: 380px;
   height: 880px;
@@ -19,28 +19,28 @@
   /* Show the checkmark when checked */
 }
 
-.App__form h3 {
+.desktop__form h3 {
   margin: 0 0 24px 0;
 }
 
-.App__form p.text__small {
+.desktop__form p.text__small {
   padding: 0 0 28px 0;
   line-height: 1.15;
 }
 
-.App__form label {
+.desktop__form label {
   display: block;
   position: relative;
   font-weight: 600;
   font-size: 1.1em;
 }
 
-.App__form label input {
+.desktop__form label input {
   border: 2px solid #747474;
 }
 
-.App__form label input[type="text"],
-.App__form label input[type="email"] {
+.desktop__form label input[type="text"],
+.desktop__form label input[type="email"] {
   width: 100%;
   margin: 8px 0;
   height: 35px;
@@ -48,7 +48,7 @@
   font-size: 1em;
 }
 
-.App__form label p {
+.desktop__form label p {
   font-size: 0.85em;
   width: 200px;
   margin: 0 auto;
@@ -56,14 +56,14 @@
   letter-spacing: 0.25px;
 }
 
-.App__form label[for="communication"] input,
-.App__form label[for="privacy"] input {
+.desktop__form label[for="communication"] input,
+.desktop__form label[for="privacy"] input {
   position: absolute;
   cursor: pointer;
   opacity: 0;
 }
 
-.App__form .checkmark {
+.desktop__form .checkmark {
   position: absolute;
   top: 0;
   left: 0;
@@ -74,24 +74,24 @@
   cursor: pointer;
 }
 
-.App__form label[for="communication"] input:hover input ~ .checkmark,
-.App__form label[for="privacy"] input:hover input ~ .checkmark {
+.desktop__form label[for="communication"] input:hover input ~ .checkmark,
+.desktop__form label[for="privacy"] input:hover input ~ .checkmark {
   background-color: #ccc;
 }
 
-.App__form label[for="communication"] input:checked ~ .checkmark,
-.App__form label[for="privacy"] input:checked ~ .checkmark {
+.desktop__form label[for="communication"] input:checked ~ .checkmark,
+.desktop__form label[for="privacy"] input:checked ~ .checkmark {
   background-color: #4385f5;
 }
 
-.App__form .checkmark:after {
+.desktop__form .checkmark:after {
   content: "";
   position: absolute;
   display: none;
 }
 
-.App__form label[for="communication"] input:checked ~ .checkmark:after,
-.App__form label[for="privacy"] input:checked ~ .checkmark:after {
+.desktop__form label[for="communication"] input:checked ~ .checkmark:after,
+.desktop__form label[for="privacy"] input:checked ~ .checkmark:after {
   display: block;
   left: 7px;
   top: 3px;
@@ -104,14 +104,14 @@
   transform: rotate(45deg);
 }
 
-.App__form .form__submit-container {
+.desktop__form .form__submit-container {
   text-align: center;
   width: 150px;
   display: block;
   margin: 24px auto;
 }
 
-.App__form .form__submit-container .form__submit {
+.desktop__form .form__submit-container .form__submit {
   background: #4385f5;
   border: 0;
   color: white;
@@ -123,15 +123,15 @@
   cursor: pointer;
 }
 
-.App__form .success {
+.desktop__form .success {
   color: green;
 }
 
-.App__form .error {
+.desktop__form .error {
   color: red;
 }
 
-.App__form #form-messages {
+.desktop__form #form-messages {
   text-align: center;
 }
 
@@ -141,21 +141,21 @@
     padding: 8px;
     margin: 8px 0;
   }
-  .App__form {
+  .desktop__form {
     width: 30%;
     height: 100%;
   }
-  .App__form .checkmark {
+  .desktop__form .checkmark {
     height: 20px;
     width: 20px;
   }
 }
 
 @media only screen and (max-width: 1210px) {
-  .App__form {
+  .desktop__form {
     right: 60px;
   }
-  .App__form .text__small {
+  .desktop__form .text__small {
     font-size: 0.8em;
     padding: 8px;
     margin: 8px 0;
@@ -163,30 +163,30 @@
 }
 
 @media only screen and (max-width: 1024px) {
-  .App__form {
+  .desktop__form {
     right: 30px;
   }
-  .App__form h3 {
+  .desktop__form h3 {
     margin: 0 0 22px 0;
   }
-  .App__form label p {
+  .desktop__form label p {
     width: 160px;
   }
-  .App__form .text__small {
+  .desktop__form .text__small {
     padding: 0;
     margin: 0;
   }
 }
 
 @media only screen and (max-width: 900px) {
-  .App__form {
+  .desktop__form {
     width: 40%;
   }
-  .App__form label {
+  .desktop__form label {
     font-size: 1em;
   }
-  .App__form label[for="communication"] input:checked ~ .checkmark:after,
-  .App__form label[for="privacy"] input:checked ~ .checkmark:after {
+  .desktop__form label[for="communication"] input:checked ~ .checkmark:after,
+  .desktop__form label[for="privacy"] input:checked ~ .checkmark:after {
     left: 5px;
     top: 1px;
     width: 5px;
@@ -196,7 +196,7 @@
 }
 
 @media only screen and (max-width: 650px) {
-  .App__form {
+  .desktop__form {
     display: none;
   }
   .mobileForm__section {

@@ -2,7 +2,7 @@
     display: none;
 }
 
-.App__form {
+.desktop__form {
     position: relative;
     width: 380px;
     height: 880px;
@@ -125,7 +125,7 @@
         padding: 8px;
         margin: 8px 0;
     }
-    .App__form {
+    .desktop__form {
         width: 30%;
         height: 100%;
         .checkmark {
@@ -136,7 +136,7 @@
 }
 
 @media only screen and (max-width: 1210px) {
-    .App__form {
+    .desktop__form {
         right: 60px;
         .text__small {
             font-size: 0.8em;
@@ -148,7 +148,7 @@
 
 // Small Laptop viewport 1024px
 @media only screen and (max-width: 1024px) {
-    .App__form {
+    .desktop__form {
         right: 30px;
         h3 {
             margin: 0 0 22px 0;
@@ -165,7 +165,7 @@
 
 // Tablet viewport
 @media only screen and (max-width: 900px) {
-    .App__form {
+    .desktop__form {
         width: 40%;
         label {
             font-size: 1em;
@@ -186,7 +186,7 @@
 // Mobile viewport up until 650px
 @media only screen and (max-width: 650px) {
 
-    .App__form {
+    .desktop__form {
         display: none;
     }
     .mobileForm__section {
